@@ -1,0 +1,40 @@
+<div class="row">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>LOCODE</th>
+            <th>Name</th>
+            <th>NameWoDiacritics</th>
+            <th>SubDiv</th>
+            <th>Function</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>IATA</th>
+            <th>Coordinates</th>
+            <th>Map</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if @data_array.length >0 %>
+          <%@data_array.each do |locode|%>
+          <tr>
+            <td><%= locode.code %></td>
+            <td><%= locode.name %></td>
+            <td><%= locode.name_diacritics %></td>
+            <td><%= locode.sub_division.name %></td>
+            <td><%= locode.function %></td>
+            <td><%= locode.status %></td>
+            <td><%= locode.date %></td>
+            <td><%= locode.iata %></td>
+            <td><%= locode.coordinates %></td>
+            <td><%= map_link(locode) %></td>
+          </tr>
+          <%end
+          else%>
+          <td colspan=10 align="center">
+                <h4> OOPS! No LO/CODE has detected. Please try with another set of data. </h4></td>
+          <% end %>
+        </tbody>
+      </table>
+      <%== pagy_bootstrap_nav(@pagy) %>
+    </div>
