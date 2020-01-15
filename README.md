@@ -5,20 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.5.7
 
-* System dependencies
+* Rails version 5.2 
 
-* Configuration
+* rake db:migrate
 
-* Database creation
+* Define the <data> csv file path in db/seeds.rb and execute the rake db:seed
 
-* Database initialization
+* Start the server rails s
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
